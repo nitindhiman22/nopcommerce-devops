@@ -1,6 +1,7 @@
 # create the build instance 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
 
+# Platform Arguments
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 
