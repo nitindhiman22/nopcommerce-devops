@@ -17,19 +17,19 @@ pipeline {
 
         stage('Stop Existing Containers') {
             steps {
-                sh 'docker-compose down || true'
+                sh 'docker compose down || true'
             }
         }
 
         stage('Build Docker Containers') {
             steps {
-                sh 'docker-compose build'
+                sh 'docker compose build'
             }
         }
 
         stage('Run Docker Containers') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker compose up -d'
             }
         }
 
