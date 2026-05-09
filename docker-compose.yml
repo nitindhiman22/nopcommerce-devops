@@ -12,6 +12,9 @@ services:
 
     networks:
       - nopnetwork
+    
+    volumes:
+      - nopcommerce_data:/app/App_Data
 
   nopcommerce_database:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
@@ -22,8 +25,15 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Express"
 
+    volumes:
+      - mssql_data:/var/opt/mssql
+
     networks:
       - nopnetwork
 
 networks:
   nopnetwork:
+
+volumes:
+  nopcommerce_data:
+  mssql_data:
