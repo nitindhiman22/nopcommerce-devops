@@ -1,3 +1,4 @@
+# Declarative Pipeline code
 pipeline {
 
     agent any
