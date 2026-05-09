@@ -1,4 +1,4 @@
-# Declarative Pipeline code
+// this line has written to check the trigger
 pipeline {
 
     agent any
